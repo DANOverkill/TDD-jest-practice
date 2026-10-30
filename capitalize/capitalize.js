@@ -1,10 +1,6 @@
 function capitalize(string) {
-  if (string === "hello") {
-    return "Hello";
-  }
-  if (string === "world") {
-    return "World";
-  }
+  let firstLetter = string[0];
+  return `${firstLetter.toUpperCase()}${string.slice(1)}`;
 }
 
 export default capitalize;
