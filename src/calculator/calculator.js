@@ -4,7 +4,7 @@ function calculator() {
   let multiplication = 4;
   let division = 1;
 
-  return (sum, subtraction, multiplication, division);
+  return [sum, subtraction, multiplication, division];
 }
 
 export default calculator;
