@@ -1,6 +1,9 @@
 function capitalize(string) {
-  let firstLetter = string[0];
-  return `${firstLetter.toUpperCase()}${string.slice(1)}`;
+  if (typeof string !== "string") {
+    throw new Error("parameter must be a string");
+  } else {
+    return `${string[0].toUpperCase()}${string.slice(1)}`;
+  }
 }
 
 export default capitalize;

@@ -15,3 +15,7 @@ test("capitalizes the first letter of a string", () => {
 test("capitalizes the first letter of a string", () => {
   expect(capitalize("h")).toBe("H");
 });
+
+test("parameter must be a string", () => {
+  expect(() => capitalize(1)).toThrow("parameter must be a string");
+});
