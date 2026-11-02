@@ -27,3 +27,11 @@ test("test edge when more then a single word is used", () => {
 test("test edge when more then a single word is used", () => {
   expect(caesarCipher("Hello, Hi World!", 3)).toBe("Khoor, Kl Zruog!");
 });
+
+test("test edge case when more then a single word is used", () => {
+  expect(caesarCipher("Hello, Hi World!", 29)).toBe("Khoor, Kl Zruog!");
+});
+
+test("test edge case when shiftFactor is 0", () => {
+  expect(caesarCipher("Hello, Hi World!", 0)).toBe("Hello, Hi World!");
+});
