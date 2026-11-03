@@ -35,3 +35,11 @@ test("test edge case when more then a single word is used", () => {
 test("test edge case when shiftFactor is 0", () => {
   expect(caesarCipher("Hello, Hi World!", 0)).toBe("Hello, Hi World!");
 });
+
+test("test edge case when shiftFactor is a negative number", () => {
+  expect(caesarCipher("Hello, hi World!", -3)).toBe("Ebiil, ef Tloia!");
+});
+
+test("test edge case when shiftFactor is negative and the letters near the start of the array", () => {
+  expect(caesarCipher("aBc", -3)).toBe("xYz");
+});
