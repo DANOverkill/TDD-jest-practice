@@ -43,3 +43,11 @@ test("test edge case when shiftFactor is a negative number", () => {
 test("test edge case when shiftFactor is negative and the letters near the start of the array", () => {
   expect(caesarCipher("aBc", -3)).toBe("xYz");
 });
+
+test("handles a negative shift greater than the alphabet length", () => {
+  expect(caesarCipher("abc", -29)).toBe("xyz");
+});
+
+test("handles a positive shift greater than the alphabet length", () => {
+  expect(caesarCipher("abc", 55)).toBe("def");
+});

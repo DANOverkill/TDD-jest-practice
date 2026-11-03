@@ -67,13 +67,11 @@ function caesarCipher(string, shiftFactor) {
       newArr.push(letter);
     } else if (letter === letter.toUpperCase()) {
       let uppercaseLetterIndex = alphabetUppercase.indexOf(letter);
-
       let newUppercaseLetterIndex =
         (((uppercaseLetterIndex + shiftFactor) % 26) + 26) % 26;
       newArr.push(alphabetUppercase[newUppercaseLetterIndex]);
     } else {
       let letterIndex = alphabet.indexOf(letter);
-
       let newLetterIndex = (((letterIndex + shiftFactor) % 26) + 26) % 26;
       newArr.push(alphabet[newLetterIndex]);
     }
